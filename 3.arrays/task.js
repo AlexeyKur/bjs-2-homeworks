@@ -2,7 +2,7 @@ function compareArrays(arr1, arr2) {
   let result;
 
   // Ваш код
-  result = (arr1, arr2).every((item) => arr1[item] === arr2[item]);
+  result = arr1.every((item, index) => arr1[item] === arr2[item] && arr1[index] === arr2[index]);
 
   return result; // boolean
 }
