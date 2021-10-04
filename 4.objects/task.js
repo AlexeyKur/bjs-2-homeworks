@@ -18,12 +18,20 @@ Student.prototype.addMark = function (mark) {
   } else {
     this.marks.push(mark);
   }
+}
+
+Student.prototype.addMarks = function (...mark) {
+  this.marks = mark;
+}
+
+
+Student.prototype.getAverage = function (marks) {
   let sum = 0;
+  let getAverage;
   this.marks.reduce((acc, item) => {
     sum = sum + item;
-    return sum;
   }, 0);
-  this.average = (sum / this.marks.length).toFixed(2);
+  return getAverage = sum / this.marks.length;
 }
 
 Student.prototype.exclude = function (reason) {
