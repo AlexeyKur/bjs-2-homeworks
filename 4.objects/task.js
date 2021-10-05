@@ -21,7 +21,12 @@ Student.prototype.addMark = function (mark) {
 }
 
 Student.prototype.addMarks = function (...mark) {
-  this.marks = mark;
+  if(this.marks === undefined){ 
+    this.marks = [];
+    this.marks = this.marks.concat(...mark);
+  } else {
+    this.marks = this.marks.concat(...mark);
+  }
 }
 
 
